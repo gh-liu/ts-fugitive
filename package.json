@@ -12,6 +12,7 @@
   "license": "MIT",
   "scripts": {
     "generate": "tree-sitter generate",
+    "build": "tree-sitter build -o parser/fugitive.so",
     "test": "tree-sitter test"
   },
   "devDependencies": {
