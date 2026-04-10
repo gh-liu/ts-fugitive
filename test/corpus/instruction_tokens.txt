@@ -1,0 +1,60 @@
+==========================
+Additional instruction tokens
+==========================
+Head: topic/series
+
+Staged (9)
+edit abcd1234 refine parser
+fixup abcd1234
+exec deadbeef run tests
+break cafebabe
+drop 1234abcd old commit
+label abcdef12 branch-point
+reset abcdef12
+merge abcdef12 combine histories
+noop 1234abcd
+
+---
+
+(document
+  (head_header
+    key: (header_key)
+    target: (symbolic_ref))
+  (blank_line)
+  (section
+    (section_heading
+      title: (section_title
+        (section_title_word))
+      count: (section_count))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash)
+      text: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash)
+      text: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash)
+      text: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash)
+      text: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash)
+      text: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash))))

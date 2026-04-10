@@ -1,0 +1,71 @@
+==========================
+Header and section variants
+==========================
+Head: abcd1234
+Merge: refs/heads/main
+Rebase: origin/topic
+Push: upstream/feature
+Help: c? 
+
+Staged onto refs/heads/main abcd1234 (2+)
+UU conflicted/file.txt
+?? scratch.txt
+reword deadbeef update message
+squash cafebabe
+@@ -10,0 +10,2 @@ heading
+
++new line
+
+---
+
+(document
+  (head_header
+    key: (header_key)
+    target: (hash))
+  (ref_header
+    key: (header_key)
+    target: (symbolic_ref))
+  (ref_header
+    key: (header_key)
+    target: (symbolic_ref))
+  (ref_header
+    key: (header_key)
+    target: (symbolic_ref))
+  (help_header
+    key: (help_header_key)
+    tag: (help_tag)
+    text: (inline_text))
+  (blank_line)
+  (section
+    (section_heading
+      title: (section_title
+        (section_title_word))
+      (symbolic_ref)
+      (symbolic_ref)
+      (hash)
+      count: (section_count))
+    (file_entry
+      status: (modifier)
+      secondary_status: (modifier)
+      path: (inline_text))
+    (file_entry
+      status: (modifier)
+      secondary_status: (modifier)
+      path: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash)
+      text: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash))
+    (hunk
+      (hunk_header
+        start: (hunk_delimiter)
+        old_range: (range)
+        new_range: (range)
+        end: (hunk_delimiter)
+        text: (inline_text))
+      (blank_line)
+      (diff_add
+        text: (inline_text)))))
