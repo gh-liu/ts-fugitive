@@ -135,11 +135,13 @@ module.exports = grammar({
 
     hunk_header: ($) =>
       seq(
-        alias(token(prec(2, /@@+/)), $.hunk_delimiter),
+        field("start", alias(token(prec(2, /@@+/)), $.hunk_delimiter)),
         " ",
         field("old_range", $.range),
         " ",
         field("new_range", $.range),
+        " ",
+        field("end", alias(token(prec(2, /@@+/)), $.hunk_delimiter)),
         optional(seq(" ", field("text", $.inline_text))),
         $._newline,
       ),

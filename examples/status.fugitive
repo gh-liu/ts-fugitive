@@ -1,0 +1,18 @@
+Head: main
+Pull: origin/main
+Help: g? show help
+
+Unstaged (2)
+M src/parser.c
+R old.ts -> new.ts
+@@ -1,2 +1,3 @@
+ context
+-before
++after
+\ No newline at end of file
+
+Staged (1)
+A grammar.js
+pick abcd1234 wire syntax tree
+done abcd1234
+stop abcd1234 revisit hunk rules

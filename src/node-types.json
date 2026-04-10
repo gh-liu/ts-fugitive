@@ -335,6 +335,16 @@
     "type": "hunk_header",
     "named": true,
     "fields": {
+      "end": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "hunk_delimiter",
+            "named": true
+          }
+        ]
+      },
       "new_range": {
         "multiple": false,
         "required": true,
@@ -355,6 +365,16 @@
           }
         ]
       },
+      "start": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "hunk_delimiter",
+            "named": true
+          }
+        ]
+      },
       "text": {
         "multiple": false,
         "required": false,
@@ -365,16 +385,6 @@
           }
         ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "hunk_delimiter",
-          "named": true
-        }
-      ]
     }
   },
   {

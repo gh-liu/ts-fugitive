@@ -41,10 +41,10 @@ R old.ts -> new.ts
       path: (inline_text))
     (hunk
       (hunk_header
-        (hunk_delimiter)
+        start: (hunk_delimiter)
         old_range: (range)
         new_range: (range)
-        text: (inline_text))
+        end: (hunk_delimiter))
       (diff_context
         text: (inline_text))
       (diff_delete
