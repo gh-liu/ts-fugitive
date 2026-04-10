@@ -1,0 +1,20 @@
+{
+  "grammars": [
+    {
+      "name": "fugitive",
+      "camelcase": "Fugitive",
+      "title": "Fugitive",
+      "scope": "source.fugitive",
+      "file-types": [
+        "fugitive"
+      ],
+      "highlights": "queries/fugitive/highlights.scm",
+      "folds": "queries/fugitive/folds.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for fugitive status-style buffers"
+  }
+}

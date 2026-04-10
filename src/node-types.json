@@ -1,0 +1,784 @@
+[
+  {
+    "type": "_diff_line",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "diff_add",
+        "named": true
+      },
+      {
+        "type": "diff_context",
+        "named": true
+      },
+      {
+        "type": "diff_delete",
+        "named": true
+      },
+      {
+        "type": "diff_note",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_header_line",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "head_header",
+        "named": true
+      },
+      {
+        "type": "help_header",
+        "named": true
+      },
+      {
+        "type": "ref_header",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_section_item",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "done_line",
+        "named": true
+      },
+      {
+        "type": "file_entry",
+        "named": true
+      },
+      {
+        "type": "hunk",
+        "named": true
+      },
+      {
+        "type": "instruction_line",
+        "named": true
+      },
+      {
+        "type": "stop_line",
+        "named": true
+      },
+      {
+        "type": "text_line",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "blank_line",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "diff_add",
+    "named": true,
+    "fields": {
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "diff_context",
+    "named": true,
+    "fields": {
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "diff_delete",
+    "named": true,
+    "fields": {
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "diff_note",
+    "named": true,
+    "fields": {
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "document",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "_header_line",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "section",
+          "named": true
+        },
+        {
+          "type": "text_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "done_line",
+    "named": true,
+    "fields": {
+      "commit": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "hash",
+            "named": true
+          }
+        ]
+      },
+      "instruction": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "done",
+            "named": true
+          }
+        ]
+      },
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "file_entry",
+    "named": true,
+    "fields": {
+      "path": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      },
+      "secondary_status": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "modifier",
+            "named": true
+          }
+        ]
+      },
+      "status": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "modifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "head_header",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_key",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "inline_text",
+            "named": true
+          },
+          {
+            "type": "symbolic_ref",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "help_header",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "help_header_key",
+            "named": true
+          }
+        ]
+      },
+      "tag": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "help_tag",
+            "named": true
+          }
+        ]
+      },
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "hunk",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_diff_line",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "hunk_header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hunk_header",
+    "named": true,
+    "fields": {
+      "new_range": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "range",
+            "named": true
+          }
+        ]
+      },
+      "old_range": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "range",
+            "named": true
+          }
+        ]
+      },
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "hunk_delimiter",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inline_text",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "instruction",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "instruction_line",
+    "named": true,
+    "fields": {
+      "commit": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "hash",
+            "named": true
+          }
+        ]
+      },
+      "instruction": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "instruction",
+            "named": true
+          }
+        ]
+      },
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "modifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "preposition",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ref_header",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_key",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          },
+          {
+            "type": "symbolic_ref",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_section_item",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "section_heading",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section_heading",
+    "named": true,
+    "fields": {
+      "count": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "section_count",
+            "named": true
+          }
+        ]
+      },
+      "title": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "section_title",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "hash",
+          "named": true
+        },
+        {
+          "type": "heading_word",
+          "named": true
+        },
+        {
+          "type": "preposition",
+          "named": true
+        },
+        {
+          "type": "symbolic_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section_title",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "section_title_word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stop_line",
+    "named": true,
+    "fields": {
+      "commit": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "hash",
+            "named": true
+          }
+        ]
+      },
+      "instruction": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stop",
+            "named": true
+          }
+        ]
+      },
+      "text": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "text_line",
+    "named": true,
+    "fields": {
+      "text": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "inline_text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": " ",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "A",
+    "named": false
+  },
+  {
+    "type": "C",
+    "named": false
+  },
+  {
+    "type": "D",
+    "named": false
+  },
+  {
+    "type": "M",
+    "named": false
+  },
+  {
+    "type": "R",
+    "named": false
+  },
+  {
+    "type": "Rebasing",
+    "named": false
+  },
+  {
+    "type": "U",
+    "named": false
+  },
+  {
+    "type": "\\",
+    "named": false
+  },
+  {
+    "type": "break",
+    "named": false
+  },
+  {
+    "type": "detached",
+    "named": false
+  },
+  {
+    "type": "done",
+    "named": true
+  },
+  {
+    "type": "drop",
+    "named": false
+  },
+  {
+    "type": "edit",
+    "named": false
+  },
+  {
+    "type": "exec",
+    "named": false
+  },
+  {
+    "type": "fixup",
+    "named": false
+  },
+  {
+    "type": "from",
+    "named": false
+  },
+  {
+    "type": "hash",
+    "named": true
+  },
+  {
+    "type": "header_key",
+    "named": true
+  },
+  {
+    "type": "heading_word",
+    "named": true
+  },
+  {
+    "type": "help_header_key",
+    "named": true
+  },
+  {
+    "type": "help_tag",
+    "named": true
+  },
+  {
+    "type": "hunk_delimiter",
+    "named": true
+  },
+  {
+    "type": "into",
+    "named": false
+  },
+  {
+    "type": "label",
+    "named": false
+  },
+  {
+    "type": "merge",
+    "named": false
+  },
+  {
+    "type": "noop",
+    "named": false
+  },
+  {
+    "type": "onto",
+    "named": false
+  },
+  {
+    "type": "pick",
+    "named": false
+  },
+  {
+    "type": "range",
+    "named": true
+  },
+  {
+    "type": "reset",
+    "named": false
+  },
+  {
+    "type": "reword",
+    "named": false
+  },
+  {
+    "type": "section_count",
+    "named": true
+  },
+  {
+    "type": "section_title_word",
+    "named": true
+  },
+  {
+    "type": "squash",
+    "named": false
+  },
+  {
+    "type": "stop",
+    "named": true
+  },
+  {
+    "type": "symbolic_ref",
+    "named": true
+  },
+  {
+    "type": "to",
+    "named": false
+  },
+  {
+    "type": "update-ref",
+    "named": false
+  }
+]

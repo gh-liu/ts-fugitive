@@ -1,0 +1,37 @@
+=====================
+Instructional section
+=====================
+Head: feature/parser
+
+Staged (1)
+A grammar.js
+pick abcd1234 wire syntax tree
+done abcd1234
+stop abcd1234 revisit hunk rules
+
+---
+
+(document
+  (head_header
+    key: (header_key)
+    target: (symbolic_ref))
+  (blank_line)
+  (section
+    (section_heading
+      title: (section_title
+        (section_title_word))
+      count: (section_count))
+    (file_entry
+      status: (modifier)
+      path: (inline_text))
+    (instruction_line
+      instruction: (instruction)
+      commit: (hash)
+      text: (inline_text))
+    (done_line
+      instruction: (done)
+      commit: (hash))
+    (stop_line
+      instruction: (stop)
+      commit: (hash)
+      text: (inline_text))))

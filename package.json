@@ -1,0 +1,20 @@
+{
+  "name": "tree-sitter-fugitive",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for fugitive status-style buffers",
+  "main": "grammar.js",
+  "keywords": [
+    "tree-sitter",
+    "fugitive",
+    "git",
+    "neovim"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.8"
+  }
+}
